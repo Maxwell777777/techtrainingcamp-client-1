@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.Toast;
 
 import butterknife.ButterKnife;
 
@@ -36,6 +37,10 @@ public abstract class BaseActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
+    }
+
+    public void showToast(String msg){
+        Toast.makeText(context, msg, Toast.LENGTH_SHORT).show();
     }
 
 }
