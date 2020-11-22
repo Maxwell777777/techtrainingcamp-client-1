@@ -3,6 +3,7 @@ package com.jack.appnews.ui;
 import android.content.Context;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
+import android.os.Looper;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
 
@@ -43,4 +44,9 @@ public abstract class BaseActivity extends AppCompatActivity {
         Toast.makeText(context, msg, Toast.LENGTH_SHORT).show();
     }
 
+    public void showToastAsync(String msg){
+        Looper.prepare();
+        Toast.makeText(context, msg, Toast.LENGTH_SHORT).show();
+        Looper.loop();
+    }
 }
