@@ -20,6 +20,7 @@ import com.jack.appnews.bean.NewsBean;
 import com.jack.appnews.bean.NewsListBean;
 import com.jack.appnews.bean.NewsListBean.DataBean.ListBean;
 //import com.jack.appnews.listener.NewsListItemClickListener;
+import com.jack.appnews.listener.NewsListItemClickListener;
 import com.jack.appnews.mock.ImageListConstant;
 import com.jack.appnews.mock.NewsListConstant;
 
@@ -81,7 +82,7 @@ public class TabNewsFragment extends BaseFragment implements XRecyclerView.Loadi
         mRecyclerView.setAdapter(mAdapter);
 
         //4) 监听 点击,注意是监听 mAdapter ，而不是 mRecyclerView
-        //mAdapter.setOnItemClickListener(new NewsListItemClickListener(mContext));
+        mAdapter.setOnItemClickListener(new NewsListItemClickListener(mContext));
 
         //5)实现 下拉刷新和加载更多 接口
         mRecyclerView.setLoadingListener(this);

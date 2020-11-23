@@ -34,6 +34,7 @@
         <activity android:name=".ui.activity.MineAboutUsActivity" />
         <activity android:name=".ui.activity.LaunchAdActivity" />
         <activity android:name=".ui.activity.PhotoViewActivity" />
+        <activity android:name=".ui.activity.TextViewActivity" />
     </application>
 
 </manifest>

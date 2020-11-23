@@ -60,6 +60,7 @@ dependencies {
     compile 'cn.jzvd:jiaozivideoplayer:6.2.12'
     compile 'com.wx.ovalimageview:roundimageview:1.1.0'
     compile 'com.github.chrisbanes:PhotoView:2.1.3'
+    compile 'com.github.paradoxie:AutoVerticalTextview:0.1'
 }
 configurations.all {
     resolutionStrategy.eachDependency { DependencyResolveDetails details ->

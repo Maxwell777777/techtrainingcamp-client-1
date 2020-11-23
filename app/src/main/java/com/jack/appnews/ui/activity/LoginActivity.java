@@ -39,7 +39,6 @@ import okhttp3.Response;
 import okhttp3.ResponseBody;
 
 import static com.jack.appnews.Constants.BASE_URL;
-import static com.jack.appnews.Constants.FLAG;
 import static com.jack.appnews.Constants.ZI_JIE_URL;
 
 public class LoginActivity extends BaseActivity implements View.OnClickListener {
@@ -126,7 +125,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
                 Gson gson = new Gson();
                 LoginResponse loginResponse = gson.fromJson(res, LoginResponse.class);
                 if(loginResponse.getCode() == 0){
-                    FLAG = 1;
+//                    FLAG = 1;
                     String token = loginResponse.getToken();
                     SharedPreferences sp = getSharedPreferences("sp_login", MODE_PRIVATE);
                     SharedPreferences.Editor editor = sp.edit();

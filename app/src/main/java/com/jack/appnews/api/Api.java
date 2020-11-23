@@ -6,9 +6,12 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.Objects;
 
 import okhttp3.Call;
 import okhttp3.Callback;
+import okhttp3.Headers;
+import okhttp3.HttpUrl;
 import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
@@ -57,4 +60,38 @@ public class Api {
             }
         });
     }
+
+    public void getRequest(final LoginCallBack callBack, boolean markdown){
+        //添加header信息
+        Headers.Builder builder_header = new Headers.Builder();
+        for (String key : mParams.keySet()) {
+            builder_header.add(key, (String) Objects.requireNonNull(mParams.get(key)));
+        }
+        Headers headers = builder_header.build();
+
+        HttpUrl.Builder httpBuilder = HttpUrl.parse(requestUrl).newBuilder();
+        if(markdown == true){
+            httpBuilder.addQueryParameter("markdown", "true");
+        }else{
+            httpBuilder.addQueryParameter("markdown", "false");
+        }
+        OkHttpClient client = new OkHttpClient();
+        Request request = new Request.Builder().url(httpBuilder.build()).headers(headers).build();
+        Call call = client.newCall(request);
+        call.enqueue(new Callback() {
+            //请求失败时调用
+            @Override
+            public void onFailure(Call call, IOException e) {
+                Log.e("onFailure", e.getMessage());
+                callBack.onFailure(e);
+            }
+            //请求成功时调用
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+                final String result = response.body().string();
+                callBack.onSuccess(result);
+            }
+        });
+    }
+
 }
