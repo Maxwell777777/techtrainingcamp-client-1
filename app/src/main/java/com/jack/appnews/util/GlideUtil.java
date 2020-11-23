@@ -20,4 +20,17 @@ public class GlideUtil {
             e.printStackTrace();
         }
     }
+    //overload
+    public static void load(Context context, Integer resource, ImageView imageView) {
+        try {
+            Glide.with(context)
+                    .load(resource)
+                    .crossFade()
+                    .error(R.mipmap.ic_article_delete)
+                    .diskCacheStrategy(DiskCacheStrategy.ALL)//开启缓存
+                    .into(imageView);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }

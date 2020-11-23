@@ -10,7 +10,7 @@ import com.jack.appnews.adapter.ImageListRecycleAdapter;
 import com.jack.appnews.bean.ItemImageBean;
 import com.jack.appnews.bean.ItemVideoBean;
 import com.jack.appnews.listener.ImageListItemClickListener;
-import com.jack.appnews.listener.NewsListItemClickListener;
+//import com.jack.appnews.listener.NewsListItemClickListener;
 import com.jack.appnews.mock.ImageListConstant;
 import com.jack.appnews.ui.BaseFragment;
 
