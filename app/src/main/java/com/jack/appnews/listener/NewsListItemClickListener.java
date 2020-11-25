@@ -83,23 +83,28 @@ public class NewsListItemClickListener implements NewsListRecycleAdapter.ClickLi
                         switch (news_id){
                             case 1:
                                 bundle.putString("title", "绝对坦率：打造反馈文化");
-                                bundle.putString("detail", "bytedance" + "\t" + "2020年7月7日");
+                                bundle.putString("text_time", "2020年7月7日");
+                                bundle.putString("text_author","bytedance");
                                 break;
                             case 2:
                                 bundle.putString("title", "2020字节跳动全球员工摄影大赛邀请函");
-                                bundle.putString("detail", "bytedance" + "\t" + "2020年10月7日");
+                                bundle.putString("text_time", "2020年10月7日");
+                                bundle.putString("text_author","bytedance");
                                 break;
                             case 3:
                                 bundle.putString("title", "Lark·巡洋计划开发者大赛圆满结束");
-                                bundle.putString("detail", "bytedance" + "\t" + "2019年10月7日");
+                                bundle.putString("text_time", "2019年10月7日");
+                                bundle.putString("text_author","bytedance");
                                 break;
                             case 4:
                                 bundle.putString("title", "4-12 虹桥天地，蹦起来吧！");
-                                bundle.putString("vc team", "bytedance" + "\t" + "2019年4月11日");
+                                bundle.putString("text_time",  "2019年4月11日");
+                                bundle.putString("text_author","vc_team");
                                 break;
                             case 0:
                                 bundle.putString("title", "9月18日淀山湖户外团建");
-                                bundle.putString("detail", "vc mobile team" + "\t" + "2020年9月7日");
+                                bundle.putString("text_time", "2020年9月7日");
+                                bundle.putString("text_author","vc mobile team");
                                 break;
                             default:
                                 Log.i("news_id", news_id + "");

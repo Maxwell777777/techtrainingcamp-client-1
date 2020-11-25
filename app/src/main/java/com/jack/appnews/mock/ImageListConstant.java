@@ -7,34 +7,34 @@ package com.jack.appnews.mock;
 public class ImageListConstant {
     public static String[] titleList =
             {
-                    "贾静雯20年前旧照曝光 容颜未变清纯可人逆生长",
-                    "景甜成都妆容精致亮相活动 薄纱长裙优雅大方",
-                    "张佳宁古灵精怪 置身光影笑眼迷人 ",
+                    "习近平出席全国劳动模范和先进工作者表彰大会并发表重要讲话",
+                    "香港25日起重启亚博馆社区治疗设施",
+                    "中国“雾凇之都”现今冬首场雾凇 ",
             };
 
     public static String[] thumbImgList =
             {
-                    "https://t1.huanqiu.cn/ac2b93a73f3bd265077ea3a62f149c9f.jpeg",
-                    "https://t1.huanqiu.cn/447ef9533be211d72c5ce7df00c41925.jpg",
-                    "http://www.xinhuanet.com/ent/2019-04/25/1124412522_15561520076141n.jpg"
+                    "https://m1-1253159997.image.myqcloud.com/imageDir/9e47b7a6b11d8aeea014038c11899c20.jpg?w=1000",
+                    "https://m1-1253159997.image.myqcloud.com/imageDir/eb99e4eef19a17e39c6c2f7033d1e4f4.jpg?w=1000",
+                    "https://m1-1253159997.image.myqcloud.com/imageDir/0eb56453fd946024309e2aab939c8fc7.jpg"
             };
 
     public static String[][] detailImgUrls =
             {
                     {
-                            "https://t1.huanqiu.cn/5c616009176d6889f8d51e71b1fcbd6b.jpeg",
-                            "https://t1.huanqiu.cn/5ac324f0e9127723feabc10665cd4346.jpeg",
-                            "https://t1.huanqiu.cn/ac2b93a73f3bd265077ea3a62f149c9f.jpeg",
+                            "ttps://m1-1253159997.image.myqcloud.com/imageDir/9e47b7a6b11d8aeea014038c11899c20.jpg?w=1000",
+                            "https://m1-1253159997.image.myqcloud.com/imageDir/5d33174492556bed6187434ba72aeefd.jpg?w=1000",
+                            "https://m1-1253159997.image.myqcloud.com/imageDir/ae7f0c814ba4ae1b2f2e61419622f587.jpg?w=1000",
                     },
                     {
-                            "https://t1.huanqiu.cn/447ef9533be211d72c5ce7df00c41925.jpg",
-                            "https://t1.huanqiu.cn/6250e564cd25361c0faeac9928191a9d.jpg",
-                            "https://t1.huanqiu.cn/6c3ff9fd446826510f3a5b2f3d1c16a0.jpg",
-                            "https://t1.huanqiu.cn/41fec90dd4955add69853e8adc118bee.jpg"
+                            "https://m1-1253159997.image.myqcloud.com/imageDir/eb99e4eef19a17e39c6c2f7033d1e4f4.jpg",
+                            "https://m1-1253159997.image.myqcloud.com/imageDir/0c5f10982b7d2742ce87d50956f53183.jpg",
+                            "https://m1-1253159997.image.myqcloud.com/imageDir/b047cd316ba486475b5a004f30c9c2ad.jpg",
+                            "https://m1-1253159997.image.myqcloud.com/imageDir/1562c514977b792590a2091c0dc4b57c.jpg"
                     },
                     {
-                            "http://www.xinhuanet.com/ent/2019-04/25/1124412522_15561520159451n.jpg",
-                            "http://www.xinhuanet.com/ent/2019-04/25/1124412522_15561520076141n.jpg"
+                            "https://m1-1253159997.image.myqcloud.com/imageDir/0eb56453fd946024309e2aab939c8fc7.jpg",
+                            "https://m1-1253159997.image.myqcloud.com/imageDir/2115184cb3c260f9982d11b70b14563a.jpg?w=1000"
                     }
             };
 

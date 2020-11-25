@@ -20,13 +20,15 @@ public class TextViewActivity extends BaseActivity {
     @Override
     protected void initViews() {
         TextView title = (TextView) findViewById(R.id.text_title);
-        TextView detail = (TextView) findViewById(R.id.text_detail);
+        TextView text_author = (TextView) findViewById(R.id.text_author);
+        TextView text_time = (TextView) findViewById(R.id.text_time);
         LinearLayout scroller = (LinearLayout) findViewById(R.id.scroll);
         TextView content = new TextView(this);
         content.setTextColor(Color.BLACK);
         Bundle bundle = this.getIntent().getExtras();
         title.setText(bundle.getString("title"));
-        detail.setText(bundle.getString("detail"));
+        text_author.setText(bundle.getString("text_author"));
+        text_time.setText(bundle.getString("text_time"));
         content.setText(bundle.getString("content"));
         scroller.addView(content);
 

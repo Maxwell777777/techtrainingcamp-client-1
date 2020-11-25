@@ -7,23 +7,30 @@ package com.jack.appnews.mock;
 public class VideoListConstant {
     public static String[] videoTitleList =
             {
-                    "汽车“召回”和“不召回”哪个更可怕？",
-                    "访大陆如签协议，将被罚50万",
+                    "5G时代数字城市科技",
+                    "故宫的冬季雪景",
+                    "重庆洪崖洞夜景渝中区凔百路夜景渝中半岛夜景",
+
             };
     public static String[] videoCateList =
             {
-                    "大连阳光新闻网",
-                    "一点咨询新闻",
+                    "摄图网",
+                    "摄图网",
+                    "摄图网",
             };
     public static String[] videoImgList =
             {
-                    "https://scb.liaidi.com//data//image//photo//2017//12//20171214205200832660.jpg",
-                    "https://scb.liaidi.com//data//image//photo//2017//12//20171214205008812743.jpg",
+                    "https://img95.699pic.com/video_cover/84/81/25/b_fzyafBCWBiJF1571848125.jpg",
+                    "https://img95.699pic.com/video_cover/41/29/35/b_Kfpztg94UUJG1604412935.JPG",
+                    "https://img95.699pic.com/video_cover/48/86/05/a_N3atfePBDu5p1597488605.jpg",
             };
     public static String[] videoUrlList =
             {
-                    "https://scb.liaidi.com//data//video//2017//12//20171214212407880750.mp4",
-                    "https://scb.liaidi.com//data//video//2017//12//20171214235251279358.mp4",
+                    "https://video.699pic.com/videos/84/81/40/b_6fdFZf0AYJpG1571848140.mp4",
+                    "https://video.699pic.com/videos/41/30/05/b_jgS33BJMmbaU1604413005.mp4",
+                    "https://video.699pic.com/videos/48/88/60/a_zIq8ENn0taue1597488860.mp4",
+
+
             };
 
 }

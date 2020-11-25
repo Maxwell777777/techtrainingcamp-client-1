@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -13,42 +13,64 @@
         android:orientation="vertical">
 
         <!-- 文章 -->
-        <TextView
-            android:id="@+id/text_first"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:text="文章"
-            android:textColor="@android:color/black"
-            android:textSize="24sp" />
+<!--        <TextView-->
+<!--            android:id="@+id/text_first"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:gravity="center"-->
+<!--            android:text="文章"-->
+<!--            android:textColor="@android:color/black"-->
+<!--            android:textSize="24sp" />-->
         <!-- 分割线 -->
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:layout_marginTop="2dp"
-            android:background="@android:color/black" />
+<!--        <View-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="2dp"-->
+<!--            android:layout_marginTop="2dp"-->
+<!--            android:background="@android:color/black" />-->
         <!-- 标题 -->
-        <TextView
-            android:id="@+id/text_title"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:textColor="@android:color/black"
-            android:textSize="24sp" />
-        <!-- 分割线 -->
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:layout_marginTop="2dp"
-            android:background="@android:color/black" />
+            android:layout_height="wrap_content"
+
+            android:layout_gravity="bottom"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/text_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:layout_marginLeft="5dp"
+                android:text="标标标题标题标题标题标题"
+                android:textColor="@android:color/black"
+                android:textSize="24sp" />
+
         <!-- 作者 发布时间 -->
-        <TextView
-            android:id="@+id/text_detail"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:textColor="@android:color/black"
-            android:textSize="24sp" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/text_title"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/text_author"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="今日新闻"
+                    android:textSize="14sp" />
+                <TextView
+                    android:id="@+id/text_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="100dp"
+                    android:text="刚刚"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+        </RelativeLayout>
         <!-- 分割线 -->
         <View
             android:layout_width="match_parent"
@@ -61,19 +83,18 @@
             <!-- android:gravity="center" -->
 
 
-    </LinearLayout>
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/first">
-        <LinearLayout
-            android:id="@+id/scroll"
+
+        <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
-
-
-        </LinearLayout>
-    </ScrollView>
-
-</RelativeLayout>
+            android:layout_below="@+id/first"
+            android:padding="10dp">
+            <LinearLayout
+                android:id="@+id/scroll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>
