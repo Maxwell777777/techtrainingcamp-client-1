@@ -22,11 +22,11 @@ public class DBCateBeanDao extends AbstractDao<DBCateBean, Void> {
     /**
      * Properties of entity DBCateBean.<br/>
      * Can be used for QueryBuilder and for referencing column names.
-    */
+     */
     public static class Properties {
         public final static Property Cate_id = new Property(0, int.class, "cate_id", false, "CATE_ID");
         public final static Property Cate_name = new Property(1, String.class, "cate_name", false, "CATE_NAME");
-    };
+    }
 
 
     public DBCateBeanDao(DaoConfig config) {
@@ -102,6 +102,12 @@ public class DBCateBeanDao extends AbstractDao<DBCateBean, Void> {
     @Override
     public Void getKey(DBCateBean entity) {
         return null;
+    }
+
+    @Override
+    public boolean hasKey(DBCateBean entity) {
+        // TODO
+        return false;
     }
 
     @Override

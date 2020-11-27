@@ -106,5 +106,5 @@ public class MineFragment extends BaseFragment implements View.OnClickListener {
             e.printStackTrace();
         }
     }
-    
+
 }

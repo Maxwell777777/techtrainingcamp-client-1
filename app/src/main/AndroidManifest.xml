@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:networkSecurityConfig="@xml/network_security_config">
-        <activity android:name=".ui.activity.LoginActivity"></activity>
+
 
         <activity
             android:name=".ui.activity.SplashActivity"
@@ -35,6 +35,7 @@
         <activity android:name=".ui.activity.LaunchAdActivity" />
         <activity android:name=".ui.activity.PhotoViewActivity" />
         <activity android:name=".ui.activity.TextViewActivity" />
+        <activity android:name=".ui.activity.LoginActivity" />
     </application>
 
 </manifest>

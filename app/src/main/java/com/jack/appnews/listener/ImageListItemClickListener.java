@@ -32,7 +32,7 @@ public class ImageListItemClickListener implements ImageListRecycleAdapter.Click
     }
 
     @Override
-    public void onItemClick(View v, int position, List<ItemImageBean> items) {
+    public void onItemClick(View v, final int position, final List<ItemImageBean> items) {
         try{
 
             SharedPreferences sp = mContext.getSharedPreferences("sp_login", Context.MODE_PRIVATE);
@@ -52,18 +52,27 @@ public class ImageListItemClickListener implements ImageListRecycleAdapter.Click
                         mContext.startActivity(intent_login);
                     }else{
                         //跳转到自定义TextView
-                        Intent intent = new Intent(mContext, TextViewActivity.class);
-                        Log.i("res111", res);
-                        Gson gson = new Gson();
-                        TextResponse textResponse = gson.fromJson(res, TextResponse.class);
-                        String text = textResponse.getData();
+//                        Intent intent = new Intent(mContext, TextViewActivity.class);
+//                        Log.i("res111", res);
+//                        Gson gson = new Gson();
+//                        TextResponse textResponse = gson.fromJson(res, TextResponse.class);
+//                        String text = textResponse.getData();
+//                        Bundle bundle = new Bundle();
+//                        //根据id解析json获取title等
+//                        bundle.putString("title", "绝对坦率：打造反馈文化");
+//                        bundle.putString("detail", "bytedance" + "\t" + "2020年7月7日");
+//                        bundle.putString("content", text);
+//                        intent.putExtras(bundle);
+//                        Log.i("hiiii", res);
+//                        mContext.startActivity(intent);
+
+                        //跳转到图片显示activity
+                        Intent intent = new Intent(mContext, PhotoViewActivity.class);
                         Bundle bundle = new Bundle();
-                        //根据id解析json获取title等
-                        bundle.putString("title", "绝对坦率：打造反馈文化");
-                        bundle.putString("detail", "bytedance" + "\t" + "2020年7月7日");
-                        bundle.putString("content", text);
+                        bundle.putSerializable("dataBean", items.get(position));
                         intent.putExtras(bundle);
-                        Log.i("hiiii", res);
+                        intent.putExtra("curPos", 0);
+
                         mContext.startActivity(intent);
                     }
                 }

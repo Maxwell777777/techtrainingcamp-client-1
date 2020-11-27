@@ -22,7 +22,7 @@ public class ImageListConstant {
     public static String[][] detailImgUrls =
             {
                     {
-                            "ttps://m1-1253159997.image.myqcloud.com/imageDir/9e47b7a6b11d8aeea014038c11899c20.jpg?w=1000",
+                            "https://m1-1253159997.image.myqcloud.com/imageDir/9e47b7a6b11d8aeea014038c11899c20.jpg?w=1000",
                             "https://m1-1253159997.image.myqcloud.com/imageDir/5d33174492556bed6187434ba72aeefd.jpg?w=1000",
                             "https://m1-1253159997.image.myqcloud.com/imageDir/ae7f0c814ba4ae1b2f2e61419622f587.jpg?w=1000",
                     },

@@ -47,8 +47,8 @@ public class DaoSession extends AbstractDaoSession {
     }
     
     public void clear() {
-        dBCateBeanDaoConfig.getIdentityScope().clear();
-        dBNewsBeanDaoConfig.getIdentityScope().clear();
+        dBCateBeanDaoConfig.clearIdentityScope();
+        dBNewsBeanDaoConfig.clearIdentityScope();
     }
 
     public DBCateBeanDao getDBCateBeanDao() {
