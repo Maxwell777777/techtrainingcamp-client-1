@@ -3,11 +3,13 @@ package com.jack.appnews.ui.fragment;
 import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Handler;
 import android.os.Message;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.jack.appnews.R;
 import com.jack.appnews.ui.BaseFragment;
@@ -15,6 +17,8 @@ import com.jack.appnews.ui.activity.MineAboutUsActivity;
 import com.jack.appnews.util.CleanCacheUtils;
 
 import butterknife.BindView;
+
+import static android.content.Context.MODE_PRIVATE;
 
 /**
  * 我的
@@ -27,6 +31,7 @@ public class MineFragment extends BaseFragment implements View.OnClickListener {
     @BindView(R.id.tv_cache)
     TextView mCache;
     private ProgressDialog mProgressDialog;//清理缓存时的对话框
+    private SharedPreferences sp;
 
     @Override
     protected int inflateLayoutId() {
@@ -47,7 +52,9 @@ public class MineFragment extends BaseFragment implements View.OnClickListener {
             switch (value) {
                 case 1:
                     mProgressDialog.dismiss();
-                    mCache.setText(msg.getData().getString("cacheSize"));
+//                    mCache.setText(msg.getData().getString("cacheSize"));
+//                    mCache.setText("clear token");
+                    Toast.makeText(getActivity(), "clear token", Toast.LENGTH_SHORT).show();
                     break;
                 default:
                     break;
@@ -94,17 +101,24 @@ public class MineFragment extends BaseFragment implements View.OnClickListener {
     }
 
     /**
-     * 清除本应用数据库文件 和mDiskLruCache的大小
+     * 清除本应用token
      *
      * @return
      */
     private void cleanDatabase() {
         try {
-            CleanCacheUtils.cleanDatabases(getActivity());
-            CleanCacheUtils.cleanExternalDatabases(getActivity());
+            SharedPreferences.Editor editor = sp.edit();
+            editor.clear();
+            editor.commit();
+
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
+    @Override
+    protected void prepare() {
+        super.prepare();
+        sp = context.getSharedPreferences("sp_login", MODE_PRIVATE);
+    }
 }

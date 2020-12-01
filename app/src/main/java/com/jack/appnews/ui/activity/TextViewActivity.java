@@ -1,15 +1,30 @@
 package com.jack.appnews.ui.activity;
 
+import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Environment;
 import android.text.Spanned;
 import android.util.Log;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.target.GlideDrawableImageViewTarget;
 import com.jack.appnews.R;
 import com.jack.appnews.ui.BaseActivity;
+import com.zzhoujay.glideimagegetter.GlideImageGetter;
+import com.zzhoujay.richtext.LinkHolder;
 import com.zzhoujay.richtext.RichText;
+import com.zzhoujay.richtext.callback.LinkFixCallback;
+import com.zzhoujay.richtext.ig.DefaultImageGetter;
+
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class TextViewActivity extends BaseActivity {
     @Override
@@ -31,9 +46,43 @@ public class TextViewActivity extends BaseActivity {
         text_time.setText(bundle.getString("text_time"));
 //        content.setText(bundle.getString("content"));
 //        Log.i("markdown", bundle.getString("content"));
-        String result = replaceAll(bundle.getString("content"), "teamBuilding_04.png", "file:///android_asset/assets://");
-        Log.i("markdown", result);
-        RichText.fromMarkdown(result).into(content);
+
+//        String path = null;
+//        InputStream abpath = getClass().getResourceAsStream("/assets/teambuilding_04.png");
+//        try {
+//            path = new String(InputStreamToByte(abpath));
+//        }catch (Exception e){
+//            e.printStackTrace();
+//        }
+
+
+        //缓存
+//        File file = getAlbumStorageDir(this, "album");
+//        RichText.initCacheDir(file);
+        String regex = "\\(([^)]*)\\)";
+        Pattern pattern = Pattern.compile(regex);
+        String contentString = bundle.getString("content");
+        Matcher matcher = pattern.matcher(contentString);
+        while(matcher.find()){
+            int temp = 0;
+            Log.i("regex" + temp, matcher.group(1));
+            String regexString = matcher.group(1);
+            try{
+                String[] ss = regexString.split("_");
+                String replaceText = "file:///android_asset/" + ss[0] + ss[1];
+                replaceText = replaceText.toLowerCase();
+                //            String replaceText2 = "file:///android_asset/teambuilding04.png";
+                contentString = replaceAll(contentString, regexString, replaceText);
+            }catch (Exception e){
+                String replaceText = "file:///android_asset/" + matcher.group(1);
+                contentString = replaceAll(contentString, regexString, replaceText);
+            }
+
+
+        }
+        Log.i("markdown", contentString);
+        RichText.fromMarkdown(contentString).into(content);
+
         scroller.addView(content);
 
     }
@@ -44,7 +93,17 @@ public class TextViewActivity extends BaseActivity {
         }else{
             int beginIndex = parent.indexOf(targetEle);
             int endIndex = beginIndex + targetEle.length();
-            return parent.substring(0, beginIndex) + replaceEle + targetEle + parent.substring(endIndex);
+            return parent.substring(0, beginIndex) + replaceEle + parent.substring(endIndex);
         }
     }
+    public File getAlbumStorageDir(Context context, String albumName) {
+        // Get the directory for the app's private pictures directory.
+        File file = new File(context.getExternalFilesDir(
+                Environment.DIRECTORY_PICTURES), albumName);
+        if (!file.mkdirs()) {
+            Log.i("LOG_TAG", "Directory not created");
+        }
+        return file;
+    }
+
 }

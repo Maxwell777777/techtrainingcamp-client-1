@@ -35,7 +35,6 @@ public class NewsListItemClickListener implements NewsListRecycleAdapter.ClickLi
     @Override
     public void onItemClick(View v, int position, List<NewsBean> items) {
         try{
-
             SharedPreferences sp = mContext.getSharedPreferences("sp_login", Context.MODE_PRIVATE);
             String token = sp.getString("token", "null");
             HashMap<String, Object> m = new HashMap<>();

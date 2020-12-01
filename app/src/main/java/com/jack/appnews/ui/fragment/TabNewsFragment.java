@@ -103,23 +103,7 @@ public class TabNewsFragment extends BaseFragment implements XRecyclerView.Loadi
      * 生成数据实例
      */
     private List<NewsBean> genData() {
-//        List<ListBean> mList = new ArrayList<>();
-//        int len = NewsListConstant.newsTitleList.length;
-//        for (int i = 0; i < len; i++) {
-//            mList.add(new ListBean(NewsListConstant.newsTitleList[i], NewsListConstant.newsCateList[i],
-//                    1, NewsListConstant.newsUrlList[i], arrayToList(NewsListConstant.newsImgList[i])));
-//        }
-//        for (int i = 0; i < len; i++) {
-//            mList.add(new ListBean(NewsListConstant.newsTitleList[i], NewsListConstant.newsCateList[i],
-//                    2, NewsListConstant.newsUrlList[i], arrayToList(NewsListConstant.newsImgList[i])));
-//        }
-//        for (int i = 0; i < len; i++) {
-//            mList.add(new ListBean(NewsListConstant.newsTitleList[i], NewsListConstant.newsCateList[i],
-//                    1, NewsListConstant.newsUrlList[i], arrayToList(NewsListConstant.newsImgList[i])));
-//        }
-//
-//        Collections.shuffle(mList);//打乱顺序输出，为了美观
-//        return mList;
+
         List<NewsBean> mList = new ArrayList<>();
         StringBuilder stringBuilder = new StringBuilder();
         // 获得assets资源管理器

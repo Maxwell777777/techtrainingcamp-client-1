@@ -131,9 +131,6 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
                     SharedPreferences.Editor editor = sp.edit();
                     editor.putString("token", token);
                     editor.commit();
-
-//                    Intent intent = new Intent(LoginActivity.this, ImageListFragment.class);
-//                    LoginActivity.this.startActivity(intent);
                     LoginActivity.this.finish();
                     showToastAsync("登录成功");
                 }else{

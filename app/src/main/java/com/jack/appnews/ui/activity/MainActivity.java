@@ -13,7 +13,7 @@ import android.widget.ImageView;
 import android.widget.TabHost;
 import android.widget.TextView;
 
-import com.jack.appnews.App;
+//import com.jack.appnews.App;
 import com.jack.appnews.R;
 import com.jack.appnews.ui.BaseActivity;
 import com.jack.appnews.ui.fragment.ImageListFragment;
@@ -102,7 +102,7 @@ public class MainActivity extends BaseActivity implements TabHost.OnTabChangeLis
         }
 
         if ((System.currentTimeMillis() - exitTime) > 2000) {
-            App.toast("再按一次退出程序");
+            showToast("再按一次退出程序");
             exitTime = System.currentTimeMillis();
         } else {
             finish();

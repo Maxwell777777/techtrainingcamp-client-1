@@ -30,7 +30,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:padding="10dp"
-                    android:text="项目源码地址:(点击链接可直接访问)"
+                    android:text="项目源码地址:"
                     android:textColor="@color/black"
                     android:textSize="18sp" />
 
@@ -40,7 +40,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:paddingLeft="10dp"
-                    android:text="https://github.com/wukong1688/Android-AppNews"
+                    android:text="https://github.com/Maxwell777777/NewsAndroid"
                     android:textColor="@color/title_bar_color"
                     android:textSize="18sp" />
             </LinearLayout>
@@ -63,7 +63,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:paddingLeft="10dp"
-                    android:text="欢迎 Star , 欢迎拍砖!~~"
+                    android:text="欢迎提出意见"
                     android:textColor="@color/black"
                     android:textSize="18sp" />
             </LinearLayout>

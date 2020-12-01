@@ -42,7 +42,7 @@ public class MineAboutUsActivity extends BaseActivity implements View.OnClickLis
                 finish();
                 break;
             case R.id.project_address:
-                String githubUrl = "https://github.com/wukong1688/Android-AppNews";
+                String githubUrl = "https://github.com/Maxwell777777/NewsAndroid";
                 WebView webView = WebViewUtil.loadUrl(mContext, githubUrl);
                 setContentView(webView);
                 break;

@@ -35,8 +35,6 @@ public class LaunchAdActivity extends BaseActivity implements View.OnClickListen
     @Override
     protected void initViews() {
         mBtnJump.setOnClickListener(this);
-//        tvCopyright.setText("Copyright © 2017--2019");
-
         showSplash();
     }
 
