@@ -6,18 +6,13 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Toast;
 
-import com.google.gson.Gson;
 import com.jack.appnews.adapter.ImageListRecycleAdapter;
 import com.jack.appnews.api.Api;
 import com.jack.appnews.api.LoginCallBack;
 import com.jack.appnews.bean.ItemImageBean;
-import com.jack.appnews.entity.TextResponse;
 import com.jack.appnews.ui.activity.LoginActivity;
 import com.jack.appnews.ui.activity.PhotoViewActivity;
-import com.jack.appnews.ui.activity.TextViewActivity;
-import com.jack.appnews.ui.fragment.ImageListFragment;
 
 import java.util.HashMap;
 import java.util.List;

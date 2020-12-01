@@ -14,7 +14,7 @@ import android.widget.Toast;
 import com.jack.appnews.R;
 import com.jack.appnews.ui.BaseFragment;
 import com.jack.appnews.ui.activity.MineAboutUsActivity;
-import com.jack.appnews.util.CleanCacheUtils;
+
 
 import butterknife.BindView;
 

@@ -5,25 +5,19 @@ import android.content.pm.ActivityInfo;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
-import android.view.View;
-
 import com.jack.appnews.R;
 import com.jack.appnews.adapter.VideoListRecycleAdapter;
-import com.jack.appnews.bean.ItemImageBean;
 import com.jack.appnews.bean.ItemVideoBean;
-import com.jack.appnews.mock.ImageListConstant;
 import com.jack.appnews.mock.VideoListConstant;
 import com.jack.appnews.ui.BaseFragment;
 import com.jcodecraeer.xrecyclerview.ProgressStyle;
 import com.jcodecraeer.xrecyclerview.XRecyclerView;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-
 import butterknife.BindView;
 import cn.jzvd.JZVideoPlayer;
-import cn.jzvd.JZVideoPlayerStandard;
+
 
 /**
  * 每个单独标签-视频列表 Fragment

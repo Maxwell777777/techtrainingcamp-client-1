@@ -1,10 +1,6 @@
 package com.jack.appnews.ui.activity;
 
-import android.app.Activity;
-import android.content.Intent;
 import android.content.SharedPreferences;
-import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 
 import android.util.Log;
 import android.view.View;
@@ -16,30 +12,20 @@ import com.jack.appnews.R;
 
 import com.jack.appnews.api.Api;
 import com.jack.appnews.api.LoginCallBack;
-import com.jack.appnews.entity.LoginResponse;
+import com.jack.appnews.bean.LoginResponse;
 import com.jack.appnews.ui.BaseActivity;
-import com.jack.appnews.ui.fragment.ImageListFragment;
-import com.jack.appnews.util.SpUtil;
-
-import org.json.JSONObject;
-
 import java.io.IOException;
 import java.util.HashMap;
-import java.util.Map;
 
 import butterknife.BindView;
 import okhttp3.Call;
 import okhttp3.Callback;
-import okhttp3.Headers;
-import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
-import okhttp3.RequestBody;
 import okhttp3.Response;
 import okhttp3.ResponseBody;
 
 import static com.jack.appnews.Constants.BASE_URL;
-import static com.jack.appnews.Constants.ZI_JIE_URL;
 
 public class LoginActivity extends BaseActivity implements View.OnClickListener {
     @BindView(R.id.usrInput)
@@ -50,24 +36,6 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
     Button btnLogin;
     @BindView(R.id.btn_signUp)
     Button btnRegister;
-
-//    @Override
-//    protected void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_login);
-//        usrName = (EditText) findViewById(R.id.usrInput);
-//        passWord = (EditText) findViewById(R.id.passInput);
-//        btnLogin = (Button) findViewById(R.id.btn_signIn);
-//        btnRegister = (Button) findViewById(R.id.btn_signUp);
-//        btnLogin.setOnClickListener(new View.OnClickListener(){
-//            @Override
-//            public void onClick(View view) {
-//                String account = usrName.getText().toString().trim();
-//                String pwd = passWord.getText().toString().trim();
-//                login(account, pwd);
-//            }
-//        });
-//    }
 
     @Override
     protected void initViews() {
@@ -96,12 +64,12 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
         }
     }
     private void login(String account, String pwd){
-        if(SpUtil.isEmpty(account)){
+        if(isEmpty(account)){
 //            Toast.makeText(this, "请输入账号", Toast.LENGTH_SHORT).show();
             showToast("请输入账号");
             return;
         }
-        if(SpUtil.isEmpty(pwd)){
+        if(isEmpty(pwd)){
 //            Toast.makeText(this, "请输入密码", Toast.LENGTH_SHORT).show();
             showToast("请输入密码");
             return;
@@ -144,54 +112,14 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
             }
         });
     }
-//    private void login(String account, String pwd){
-//        if(SpUtil.isEmpty(account)){
-////            Toast.makeText(this, "请输入账号", Toast.LENGTH_SHORT).show();
-//            showToast("请输入账号");
-//            return;
-//        }
-//        if(SpUtil.isEmpty(pwd)){
-////            Toast.makeText(this, "请输入密码", Toast.LENGTH_SHORT).show();
-//            showToast("请输入密码");
-//            return;
-//        }
-//        OkHttpClient client = new OkHttpClient.Builder().build();
-//        Map m = new HashMap<>();
-////        m.put("name", account);//自己的springboot后台，目前开发数据库登录功能，待开发注册功能
-////        m.put("password", pwd);
-//        m.put("username", account);//字节后台，用户名密码可以随意填写，接口不会进行验证，没有注册功能
-//        m.put("password", pwd);
-//        JSONObject jsonObject = new JSONObject(m);
-//        String jsonStr = jsonObject.toString();
-//        RequestBody requestBodyJson = RequestBody.create(MediaType.parse("application/json"), jsonStr);
-//        showToast(jsonStr);
-//        //创建Request
-//        Request request = new Request.Builder()
-//                .url(ZI_JIE_URL + "/login")
-////                .addHeader("contentType", "application/json;charset=UTF-8")
-//                .post(requestBodyJson)
-//                .build();
-//        //创建call回调对象
-//        final Call call = client.newCall(request);
-//        //发起请求
-//        call.enqueue(new Callback() {
-//            @Override
-//            public void onFailure(Call call, IOException e) {
-//                Log.e("onFailure", e.getMessage());
-//            }
-//
-//            @Override
-//            public void onResponse(Call call, Response response) throws IOException {
-//                final String result = response.body().string();
-//                runOnUiThread(new Runnable() {
-//                    @Override
-//                    public void run() {
-//                        showToast(result);
-//                    }
-//                });
-//            }
-//        });
-//    }
+
+    public static boolean isEmpty(String str){
+        if(str == null || str.length() <= 0){
+            return true;
+        }else{
+            return false;
+        }
+    }
 
     private void loginGet(String account, String pwd){
         final OkHttpClient client = new OkHttpClient();
@@ -229,11 +157,11 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
     }
 
     private void register(String account, String pwd){
-        if(SpUtil.isEmpty(account)){
+        if(isEmpty(account)){
             showToast("请输入账号");
             return;
         }
-        if(SpUtil.isEmpty(pwd)){
+        if(isEmpty(pwd)){
             showToast("请输入密码");
             return;
         }

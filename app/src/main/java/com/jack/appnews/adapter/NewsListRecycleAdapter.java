@@ -73,19 +73,19 @@ public class NewsListRecycleAdapter extends RecyclerView.Adapter<RecyclerView.Vi
     public void onBindViewHolder(final XRecyclerView.ViewHolder holder, int position) {
         NewsBean newsBean = items.get(position);
         Log.i("newsbean",newsBean.getId());
-        //String path = "file:///android_assert/";
+//        String path = "file:///android_assert/";
         String type = String.valueOf(getItemViewType(position));
-        Log.i("type",type);
+//        Log.i("type",type);
         if(getItemViewType(position)==4) {
             ViewHolderMuti viewHolderMuti = (ViewHolderMuti) holder;
             viewHolderMuti.tvTitle.setText(newsBean.getTitle());
             viewHolderMuti.tvAuthor.setText(newsBean.getAuthor());
             viewHolderMuti.tvPublishTime.setText(newsBean.getTime());
             if (newsBean.getCovers() != null && newsBean.getCovers().size() == 4) {
-                GlideUtil.load(context, R.drawable.tb09_1, viewHolderMuti.ivImage1);
-                GlideUtil.load(context, R.drawable.tb09_2, viewHolderMuti.ivImage2);
-                GlideUtil.load(context, R.drawable.tb09_3, viewHolderMuti.ivImage3);
-                GlideUtil.load(context, R.drawable.tb09_4, viewHolderMuti.ivImage4);
+                GlideUtil.load(context, R.mipmap.tb09_1, viewHolderMuti.ivImage1);
+                GlideUtil.load(context, R.mipmap.tb09_2, viewHolderMuti.ivImage2);
+                GlideUtil.load(context, R.mipmap.tb09_3, viewHolderMuti.ivImage3);
+                GlideUtil.load(context, R.mipmap.tb09_4, viewHolderMuti.ivImage4);
             }
         }else if(getItemViewType(position)==0){
             ViewHolderNone viewHolderNone = (ViewHolderNone) holder;
@@ -98,16 +98,25 @@ public class NewsListRecycleAdapter extends RecyclerView.Adapter<RecyclerView.Vi
             viewHolderOne.tvAuthor.setText(newsBean.getAuthor());
             viewHolderOne.tvPublishTime.setText(newsBean.getTime());
             //加载图片
-            Log.i("path1", newsBean.getCover());
+//            Log.i("path1", newsBean.getCover());
             if ("tancheng.jpg".equals(newsBean.getCover())) {
                 GlideUtil.load(context, R.mipmap.tancheng, viewHolderOne.ivImage);
                 Log.i("signal", "true");
-            }else if("event02.png".equals(newsBean.getCover())){
+            }else if("event_02.png".equals(newsBean.getCover())){
                 GlideUtil.load(context, R.mipmap.event_02, viewHolderOne.ivImage);
             }else if("teamBuilding_04.png".equals(newsBean.getCover())){
                 GlideUtil.load(context, R.mipmap.teambuilding_04, viewHolderOne.ivImage);
             }
-            Log.i("signal1", "true");
+//            if(newsBean.getCover().startsWith("_")){
+//                String[] ss = newsBean.getCover().split("_");
+//                String replaceText = path + ss[0] + ss[1];
+//                replaceText = replaceText.toLowerCase();
+//                GlideUtil.load(context, replaceText, viewHolderOne.ivImage);
+//            }else {
+//                GlideUtil.load(context, path+newsBean.getCover(), viewHolderOne.ivImage);
+//            }
+
+
         }
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {

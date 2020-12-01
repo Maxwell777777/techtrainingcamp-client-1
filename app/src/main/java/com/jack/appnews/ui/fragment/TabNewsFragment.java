@@ -7,34 +7,19 @@ import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.util.Log;
-
 import com.google.gson.Gson;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonParser;
 import com.google.gson.reflect.TypeToken;
 import com.jack.appnews.R;
 import com.jack.appnews.adapter.NewsListRecycleAdapter;
-import com.jack.appnews.bean.ItemImageBean;
 import com.jack.appnews.bean.NewsBean;
-import com.jack.appnews.bean.NewsListBean;
-import com.jack.appnews.bean.NewsListBean.DataBean.ListBean;
-//import com.jack.appnews.listener.NewsListItemClickListener;
 import com.jack.appnews.listener.NewsListItemClickListener;
-import com.jack.appnews.mock.ImageListConstant;
-import com.jack.appnews.mock.NewsListConstant;
-
 import com.jack.appnews.ui.BaseFragment;
 import com.jcodecraeer.xrecyclerview.ProgressStyle;
 import com.jcodecraeer.xrecyclerview.XRecyclerView;
-
-import org.json.JSONObject;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 import butterknife.BindView;

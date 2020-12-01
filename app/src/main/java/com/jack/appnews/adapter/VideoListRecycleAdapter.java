@@ -1,7 +1,6 @@
 package com.jack.appnews.adapter;
 
 import android.content.Context;
-import android.content.pm.ActivityInfo;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
@@ -18,7 +17,6 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import cn.jzvd.JZVideoPlayer;
 import cn.jzvd.JZVideoPlayerStandard;
 
 public class VideoListRecycleAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
