@@ -4,25 +4,14 @@ import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Environment;
-import android.text.Spanned;
 import android.util.Log;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.target.GlideDrawableImageViewTarget;
 import com.jack.appnews.R;
 import com.jack.appnews.ui.BaseActivity;
-import com.zzhoujay.glideimagegetter.GlideImageGetter;
-import com.zzhoujay.richtext.LinkHolder;
 import com.zzhoujay.richtext.RichText;
-import com.zzhoujay.richtext.callback.LinkFixCallback;
-import com.zzhoujay.richtext.ig.DefaultImageGetter;
-
-import java.io.ByteArrayOutputStream;
 import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 

@@ -32,32 +32,27 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_marginRight="5dp"
-                android:layout_weight="1"
-                android:src="@mipmap/tb09_1" />
+                android:layout_weight="1" />
 
             <ImageView
                 android:id="@+id/iv_main_img2"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_marginRight="5dp"
-                android:layout_weight="1"
-                android:src="@mipmap/img_show" />
+                android:layout_weight="1" />
 
             <ImageView
                 android:id="@+id/iv_main_img3"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_marginRight="5dp"
-                android:layout_weight="1"
-                android:src="@mipmap/img_show" />
+                android:layout_weight="1" />
             <ImageView
                 android:id="@+id/iv_main_img4"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_marginRight="5dp"
-                android:layout_weight="0.9"
-
-                android:src="@mipmap/tb09_4" />
+                android:layout_weight="0.9" />
 
         </LinearLayout>
 

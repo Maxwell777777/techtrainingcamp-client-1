@@ -12,7 +12,7 @@ import java.lang.reflect.Field;
  */
 public class TabLayoutUtil {
     public static void reflex(final TabLayout tabLayout) {
-        //了解源码得知 线的宽度是根据 tabView的宽度来设置的
+        //线的宽度是根据 tabView的宽度来设置的
         tabLayout.post(new Runnable() {
             @Override
             public void run() {

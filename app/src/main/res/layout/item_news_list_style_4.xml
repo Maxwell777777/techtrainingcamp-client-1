@@ -24,7 +24,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center|right"
-                android:text="标标标题标题标题标题标题题标题标题标题标题题标题标题标题标题标题"
+                android:text="标标标题标题标题"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
@@ -62,7 +62,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="5dp"
                     android:layout_toLeftOf="@id/iv_delete"
-                    android:text="刚刚"
                     android:textSize="12sp" />
             </RelativeLayout>
         </RelativeLayout>

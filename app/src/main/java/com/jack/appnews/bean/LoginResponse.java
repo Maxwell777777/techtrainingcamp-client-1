@@ -1,4 +1,4 @@
-package com.jack.appnews.entity;
+package com.jack.appnews.bean;
 
 public class LoginResponse {
     private int code;

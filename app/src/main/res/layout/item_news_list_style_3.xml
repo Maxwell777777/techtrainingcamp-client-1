@@ -16,8 +16,7 @@
             android:layout_width="130dp"
             android:layout_height="match_parent"
             android:layout_gravity="center"
-            android:layout_marginRight="10dp"
-            android:src="@mipmap/img_show" />
+            android:layout_marginRight="10dp" />
 
         <RelativeLayout
             android:layout_width="0dp"
@@ -30,7 +29,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center|right"
-                android:text="标标标题标题标题标题标题题标题标题标题标题题标题标题标题标题标题"
+                android:text="标标标题标题题标题标题标题"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
@@ -48,7 +47,6 @@
                     android:id="@+id/tv_author"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="今日新闻"
                     android:textSize="12sp" />
 
                 <ImageView
@@ -67,7 +65,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="5dp"
                     android:layout_toLeftOf="@id/iv_delete"
-                    android:text="刚刚"
                     android:textSize="12sp" />
             </RelativeLayout>
         </RelativeLayout>

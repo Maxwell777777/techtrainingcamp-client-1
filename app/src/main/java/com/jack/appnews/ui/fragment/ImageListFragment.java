@@ -3,14 +3,10 @@ package com.jack.appnews.ui.fragment;
 import android.content.Context;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.View;
-
 import com.jack.appnews.R;
 import com.jack.appnews.adapter.ImageListRecycleAdapter;
 import com.jack.appnews.bean.ItemImageBean;
-import com.jack.appnews.bean.ItemVideoBean;
 import com.jack.appnews.listener.ImageListItemClickListener;
-//import com.jack.appnews.listener.NewsListItemClickListener;
 import com.jack.appnews.mock.ImageListConstant;
 import com.jack.appnews.ui.BaseFragment;
 

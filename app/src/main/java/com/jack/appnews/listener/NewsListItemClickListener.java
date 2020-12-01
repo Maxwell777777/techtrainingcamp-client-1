@@ -12,10 +12,8 @@ import com.jack.appnews.adapter.NewsListRecycleAdapter;
 import com.jack.appnews.api.Api;
 import com.jack.appnews.api.LoginCallBack;
 import com.jack.appnews.bean.NewsBean;
-import com.jack.appnews.bean.NewsListBean;
-import com.jack.appnews.entity.TextResponse;
+import com.jack.appnews.bean.TextResponse;
 import com.jack.appnews.ui.activity.LoginActivity;
-import com.jack.appnews.ui.activity.NewsDetailActivity;
 import com.jack.appnews.ui.activity.TextViewActivity;
 
 import java.util.HashMap;
