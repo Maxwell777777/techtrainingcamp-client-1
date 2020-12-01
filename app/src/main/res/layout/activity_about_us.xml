@@ -40,7 +40,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:paddingLeft="10dp"
-                    android:text="https://github.com/Maxwell777777/NewsAndroid"
+                    android:text="https://github.com/Maxwell777777/techtrainingcamp-client-1"
                     android:textColor="@color/title_bar_color"
                     android:textSize="18sp" />
             </LinearLayout>
